@@ -1,0 +1,41 @@
+// TEXT
+$font-family-sans-serif: 'Nunito', sans-serif;
+$line-height-base: 1.6;
+
+// COLOR PALETTE
+$text-color: #181f1c;
+$primary-color: #ffc509;
+$secondary-color: #740602;
+$tertiary-color: #264f36;
+
+
+// COLOR OF ELEMENTS
+
+// page product background
+$page-product-bg: radial-gradient(circle, rgba(255,197,9,1) 58%, rgba(235,179,2,1) 80%, rgba(208,158,0,1) 100%);
+
+// product card 
+$product-card-bg:#ffc509;  //primary
+$product-card-cart-icon: #740602;  //secondary
+$product-card-cart-icon-hover: #eae1e1;
+$product-card-cart-info:#ffc509;  //primary
+$product-card-info-under: #740602;  //secondary
+
+// info popup card 
+$popup-cart-btn-bg:#740602;  //secondary
+$popup-cart-close: #333;
+$popup-cart-close-overlay: #740602;  //secondary
+
+
+// cart 
+$cart-bg: #f5f5f5;
+$cart-quantity-btn: #740602; //secondary
+$cart-checkout-btn-bg:#740602; //secondary
+$clear-cart-color:  #808083;
+
+// payment form and visa 
+// $payment-card-bg: red;
+$pay-now-btn: #740602;  //secondary
+
+
+

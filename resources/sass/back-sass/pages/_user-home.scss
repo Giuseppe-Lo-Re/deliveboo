@@ -1,0 +1,12 @@
+.ms_user-home-info,
+.ms_user-orders-info {
+    font-size: 1.1rem;
+
+    > h1 span {
+        color: $primary-color;
+    }
+    > div span {
+
+        color: $secondary-color;
+    }
+}

@@ -1,0 +1,298 @@
+// RESETS
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.ms_link {
+    color: $primary-color;
+}
+
+label:not([for="cover"], .form-check-label) {
+    position: relative;
+    top: 52px;
+    translate: 0.5rem -50%;
+    transition: all 150ms ease-in-out;
+    color: #acabab;
+}
+
+.ms_input-hover-wrapper {
+
+    &:hover {
+        label:not([for="cover"], .form-check-label) {
+            top: 0;
+            translate: 0.5rem 0;
+            color: #212529; 
+        }
+        label.ms_label-active {
+            color: $primary-color;
+        }
+    }
+}
+
+label.ms_label-active {
+    position: relative;
+    top: 0;
+    translate: 0.5rem 0;
+    color: $primary-color;
+}
+
+.ms_js-pwd-check-msg-wrapper {
+    position: relative;
+
+    > .ms_js-pwd-check-msg {
+        padding-left: 0.5rem;
+        display: none;
+        
+        &-active {
+            display: block;
+        }
+    }
+}
+
+input,
+textarea {
+    
+    &:not([type="checkbox"], .ms_btn) {
+        padding-block: 0.5rem;
+        padding-inline: 0.5rem;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $secondary-color;
+
+        &:focus-visible {
+            outline: none;
+            box-shadow: 0 0 4px $primary-color;
+            border-bottom: 1px solid $primary-color;
+            border-radius: 0.5rem;
+        }
+    }
+}
+.ms_checkbox-wrapper {
+    gap: 0.5rem 0.7rem;
+}
+.ms_checkbox-group {
+    padding-block: 1.5rem;
+
+    > div:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+.ms_checkbox-group-title {
+    font-size: 1rem;
+}
+
+// COMMONS
+main {
+
+    h1 {
+        margin-bottom: 0.8em;
+    }
+    :is(h2, h3, h4, h5, h6) {
+        margin-bottom: 0.5em;
+    }
+}
+.ms_asterisk {
+    color: $primary-color;
+}
+.ms_txt-danger {
+    font-weight: 400;
+    color: $danger-color;
+}
+.ms_txt-warning {
+    font-weight: 400;
+    color: $warning-color;
+}
+.ms_txt-success {
+    color: $success-color;
+    font-weight: 400;
+}
+
+// header
+header {
+    padding-inline: 1rem;
+    height: 70px;
+    background-color: white;
+    color: $secondary-color;
+    border-bottom: 2px solid $primary-color;
+    box-shadow: 0 0.2rem 1rem rgb(0 0 0 / 12%);
+
+    > nav {
+        height: 100%;
+    }
+    .ms_profile-pic {
+        width: 30px;
+        aspect-ratio: 1 / 1;
+        border: 2px solid $primary-color;
+        border-radius: 50%;
+        color: $primary-color;
+        background-color: $tertiary-color;
+        overflow: hidden;
+
+        > img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+// aside
+aside {
+    padding-top: 2rem;
+    width: 200px;
+    height: calc(100vh - 70px);
+    background-color: $secondary-color;
+    color: $primary-color;
+    font-weight: 600;
+    border-right: 2px solid $primary-color;
+
+    li {
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+// main
+main {
+    width: calc(100% - 202px);
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+section {
+    padding-block: 2rem;
+    padding-inline: 2rem;
+}
+
+// buttons
+.ms_btn {
+    margin-bottom: 0.5rem;
+    padding: 0.5em 1.5em;
+    display: inline-block;
+    border: none;
+    border-radius: 10rem;
+    background-color: $secondary-color;
+    font-size: 0.95rem;
+    color: $primary-color;
+    font-weight: 600;
+
+    &:hover {
+        text-decoration: none;
+        color: $primary-color;
+    }
+    &[disabled] {
+        background-color: #212529;
+        color: #acabab;
+
+        &:hover {
+            color: #acabab;
+        }
+    }
+    &-secondary {
+        background-color: $primary-color;
+        color: $secondary-color;
+
+        &:hover {
+            text-decoration: none;
+            color: $secondary-color;
+        }
+    }
+    &-tertiary {
+        background-color: $tertiary-color;
+        color: $primary-color;
+
+        &:hover {
+            text-decoration: none;
+            color: $primary-color;
+        }
+    }
+}
+
+// BRAND LOGO
+.ms_header-brand-logo {
+    width: 70px;
+    transition: all 150ms ease-in;
+
+    &:hover {
+        filter: invert(58%) sepia(100%) saturate(450%) hue-rotate(357deg) brightness(100%) contrast(105%);
+    }
+}
+
+// MEDIA QUERIES
+@media (min-width: 1200px) { 
+
+    section {
+        padding-inline: 4rem;
+    }
+}
+
+@media (min-width: 1500px) { 
+
+    section {
+        padding-inline: 6rem;
+    }
+}
+
+@media (max-width: 768px) { 
+
+    // aside
+    aside {
+        width: 55px;
+
+        li {
+
+            > a {
+                .ms_aside-link-txt {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // main
+    main {
+        width: calc(100% - 57px);
+    }
+}
+
+@media (max-width: 480px) {  
+
+    section {
+        padding-inline: 1rem;
+    }
+
+    // header
+    header {
+        .ms_user-name-header {
+            display: none;
+        }
+    }
+    
+    // BRAND LOGOS
+    .ms_header-brand-logo {
+        width: 50px;
+    }
+}

@@ -1,0 +1,100 @@
+// start banner elimination card confirm
+#myModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 2000;
+}
+
+.modal-confirm {		
+    color: $primary-color;
+    width: 400px;
+}
+
+.modal-confirm .modal-content {
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid $secondary-color;
+    text-align: center;
+    font-size: 14px;
+}
+
+.modal-confirm .modal-header {
+    padding: 0;
+    border-bottom: none;   
+    position: relative;
+}
+
+.modal-confirm h4 {
+    margin-inline: auto;
+    font-size: 2.2rem;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $primary-color;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+.modal-confirm .modal-body {
+    padding: 0;
+    color: #212529;
+
+    p.ms_modal-delete-txt {
+        margin-bottom: 2rem;
+    }
+}
+
+.modal-confirm .modal-footer {
+    padding: 0;
+    border: none;
+    text-align: center;	
+    font-size: 1rem
+}
+
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin-inline: auto;
+    border-radius: 50%;
+    border: 4px solid $secondary-color;
+}
+
+.modal-confirm .icon-box .fa-exclamation {
+    color: $secondary-color;
+    font-size: 2.5rem;
+}
+
+.ms_more-info {
+    width: fit-content;
+
+    ul {
+        list-style: inside;
+
+        li::marker {
+            color: $tertiary-color;
+        }
+    }
+    h5 {
+        color: $primary-color;
+    }
+    div {
+        font-size: 0.94rem;
+    }
+    .ms_single-order-info,
+    .ms_customer-info,
+    .ms_customer-products {
+        color: #212529;
+
+        span {
+            color: $secondary-color;
+        }
+    }
+}
+// end banner elimination card confirm

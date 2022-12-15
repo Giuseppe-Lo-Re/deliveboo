@@ -1,0 +1,76 @@
+.ms_form-card-wrapper {
+    padding-block: 4rem;
+    width: 100vw;
+    height: 100vh;
+    background: center / cover url('../images/background-registerform.jpg');
+    justify-content: center;
+    box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5) inset;
+    overflow-y: auto;
+
+    &-login {
+        background: center / cover url('../images/wp1874155-restaurant-wallpapers.jpg');
+    }
+}
+.ms_form-card {
+    width: 50%;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid $secondary-color;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px black;
+
+    &.ms_login-card {
+        width: 50%;
+    }
+
+    input,
+    textarea {
+        background-color: transparent;
+    }
+}
+
+// card header
+.ms_form-card-header {
+    padding-block: 1rem;
+    text-align: center;
+    color: $primary-color;
+    border-bottom: 1px solid $secondary-color;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+// card body
+.ms_form-card-body {
+    padding: 2rem 4rem;
+
+    input:not([type="checkbox"]),
+    textarea {
+        margin-bottom: 0.5rem;
+    }
+}
+section .ms_form-card-body {
+    padding: 0 0;
+}
+
+// MEDIA QUERIES
+@media (max-width: 768px) {  
+
+    .ms_form-card {
+        width: 80%;
+    
+        &.ms_login-card {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 480px) {  
+
+    .ms_form-card {
+        width: 90%;
+    
+        &.ms_login-card {
+            width: 90%;
+        }
+    }
+}

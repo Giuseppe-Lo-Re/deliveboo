@@ -1,0 +1,17 @@
+// COMMONS
+// Variables
+@import '../back-sass/common/variables';
+
+// Common
+@import '../back-sass/common/common';
+
+// COMPONENTS
+@import '../back-sass/components/product-card';
+@import '../back-sass/components/form-card';
+@import '../back-sass/components/modal';
+@import '../back-sass/components/chart';
+
+// PAGES
+@import '../back-sass/pages/product-details';
+@import '../back-sass/pages/user-home';
+@import '../back-sass/pages/orders';
